@@ -33,7 +33,7 @@ Você também pode visualizar o layout do projeto através [desse link](https://
 ## 📚 <a name="aulas">Aulas</a>
 ### Aula 1
 Uma breve abordagem sobre Soft skills, trazendo 3 propostas principais:
-- Aprender diariamente e com eficiencia;
+- Aprender diariamente e com eficiência;
 - Dominar a tecnologia que deseja trabalhar;
 - Ter um posicionamento estratégico no mercado;
 
@@ -41,6 +41,30 @@ E também uma breve abordagem sobre Hard skills, apresentando:
 - Fundamentos da programação WEB;
 - Front-end;
 - Explicação breve da estrutura HTML e CSS;
+
+---
+
+### Aula 2
+Foi estudado conceitos mais abrangentes de HTML e CSS, onde foi ensinado:
+- O que é HTML? Hyper Text Markup Language, sua principal função é montar a estrutura do código;
+- Tags, sua anatomia e alinhamento;
+
+<br />
+
+- O que é CSS? Cascading Style Sheets, sua principal função é montar a parte visual do código;
+- Seletores e anatomia;
+- Specificity, voltada para hierarquia de seletores, sendo sua ordem: 
+  - inline styles '<>' 
+  - IDs '#' 
+  - Classes, atributos e pseudo-classes '.class' 
+  - Elementos e pseudo-elementos 'h1' ':before'
+- Unidades de medida e Responsividade;
+  - Usando unidades rem e pixel;
+- Box Model;
+  - conceitos de margin, border e padding;
+- Layout;
+
+---
 
 ## 📝 <a name="licença">Licença</a>
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
