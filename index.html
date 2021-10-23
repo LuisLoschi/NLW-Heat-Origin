@@ -25,32 +25,55 @@
                     <img src="img/avatar.png" alt="Foto pessoal de Luis Gustavo" />
                 </div>
 
-                <h1>Luis Loschi</h1>
+                <h1 id="userName">Luis Loschi</h1>
                 <a href="https://github.com/LuisLoschi" target="_blank">
                     <img src="img/github.svg" alt="Logo github">    
                     LuisLoschi
                 </a>
 
-                <p>An instructor focused on helping pople start programming for web</p>
+                <p>A student who loves coffee and programming</p>
                 
                 <!-- Social -->
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/luis-loschi-a54801203/" target="_blank">
+                <ul id="socialLinks">
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/" target="_blank">
                             <img src="img/linkedin.svg" alt="Logo linkedin">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.facebook.com/luis.loschi" target="_blank">
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/" target="_blank">
                             <img src="img/facebook.svg" alt="Logo facebook">
                         </a>
-                    </li> <li>
-                        <a href="https://instagram.com/luisloschi_" target="_blank">
+                    </li> 
+                    <li class="instagram">
+                        <a href="https://instagram.com/" target="_blank">
                             <img src="img/instagram.svg" alt="Logo instagram">
                         </a>
                     </li>
                 </ul>
             </div>
         </main>
+
+        <script>
+            //Objeto
+            const linksSocialMedia = {
+                github: 'LuisLoschi',
+                linkedin: 'in/luis-loschi-a54801203',
+                facebook: 'luis.loschi',
+                instagram: 'luisloschi_',
+            }
+
+            function changeSocialMediaLinks() {
+                //children acessa as tags dentro dela
+                for (let li of socialLinks.children) {
+                    const social = li.getAttribute('class');
+
+                    //Pega o link 
+                    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+                }
+            }
+
+            changeSocialMediaLinks()
+        </script>
     </body>
 </html>
