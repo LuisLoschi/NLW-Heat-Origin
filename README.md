@@ -148,5 +148,46 @@ Você também pode visualizar o layout do projeto através [desse link](https://
   
 ---
 
+<details>
+  <summary>Aula 4</summary>
+  <br /> 
+  
+  Nessa aula foi ensinado como criar uma conta no github para poder consumir sua API e aprimorar o projeto além de colocar a aplicação online através do github pages.
+  
+- API (Application Programming Interface): é um conjunto de códigos e padrões que se comunicam com outros sistemas e aplicativos, fazendo tudo funcionar. Fazendo uma analogia, uma API seria um grande restaurante onde o consumidor(site), após escolher seu prato (dados JSON) efetua o pedido ao garçom (API). Em seguida, o garçom vai até a cozinha (servidor) solicitar o pedido do consumidor. Depois de analisar e preparar o pedido, o consumidor irá receber o prato (resposta positiva ou negativa da solicitação). 
+
+- JSON: É basicamente um formato leve de troca de informações/dados entre sistemas.
+   -sintaxe: É escrito em forma de objeto.
+    ```
+    Exemplo de JSON
+    {
+      "prop": "value",
+      "string": "text",
+      "boolean": true    
+    }
+    ```
+- Fetch: Acessa uma solicitação e retorna os pedidos e o conteúdo da solicitação.
+- Promise: É um objeto que representa a eventual conclusão ou falha de uma operação assíncrona.
+- Arrow function: possui uma sintaxe mais curta quando comparada a uma expressão de função.
+  ```javascript
+    //Exemplo arrow function
+    
+    argumento => {
+      //código
+    }
+  ```
+ 
+<br>
+  
+- Para subir uma publicação online, siga estas etapas:
+1. No próprio repositório, acesse a opção **Settings**;
+2. Nas opções à esquerda, acesse **Pages**;
+3. Em **Source**, clique na opção **None** e habilite o gitHub pages trocando para a opção **main**;
+4. clique em **Save** e o link será gerado para ser acessado e compartilhado.;
+
+</details>
+  
+---
+  
 ## 📝 <a name="licença">Licença</a>
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
