@@ -1,10 +1,11 @@
 //Objeto com os dados 
 const linksSocialMedia = {
-    github: 'LuisLoschi',
-    linkedin: 'in/luis-loschi-a54801203',
-    facebook: 'luis.loschi',
-    instagram: 'luisloschi_',
+    github: `https://github.com/LuisLoschi`,
+    facebook: `https://www.facebook.com/luis.loschi`,
+    instagram: `https://www.instagram.com/luisloschi_/`,
+    linkedin: `https://www.linkedin.com/in/luis-loschi`
 }
+ 
 
 function changeSocialMediaLinks() {
     //children acessa as tags dentro dela
@@ -12,15 +13,13 @@ function changeSocialMediaLinks() {
         const social = li.getAttribute('class');
 
         //Pega o link e substitui com os dados do objeto
-        li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        li.children[0].href = `${linksSocialMedia[social]}`
     }
 }
 
-changeSocialMediaLinks()
-
 //Consumir API
 function getGitHubProfileInfo(){
-    const url = `https://api.github.com/users/${linksSocialMedia.github}`
+    const url = `https://api.github.com/users/LuisLoschi`
 
     fetch(url) //fetch vai na url e traz a resposta, então a promise fala se a resposta deu certo ou falhou. 
     .then(response => response.json() ) //Transforma a resposta em JSON e armazena a resposta em formato json(data).
@@ -34,4 +33,6 @@ function getGitHubProfileInfo(){
 
 }
 
+changeSocialMediaLinks()
 getGitHubProfileInfo()
+

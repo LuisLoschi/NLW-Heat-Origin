@@ -1,26 +1,55 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
 }
 
 html, body {
     /* colors */
     --black: hsl(240, 6%, 13%);
     --grey: hsl(240, 9%, 89%);
+    --light-grey: hsl(0, 0%, 83%);
+    --dark-grey: hsl(0, 0%, 15%);
+    --light-black: hsla(0, 1%, 28%, 0.582);
+    --orange: hsl(34, 84%, 54%);
 
-    height: 100%;
+    /* crachá */
+    --width-badge: 350px;
+    --height-badge: 550px;
+
+    height: 100vh;
     font-family: "Roboto", sans-serif;
+    font-size: 62,5%;  /* 1rem= 10px */
     -webkit-font-smoothing: antialiased;
+
+    overflow-x: hidden;
 }
 
 body {
     display: grid;
     place-items: center;
+    background: url(img/background.webp) center no-repeat;
+    background-position: top;
+}
+
+#band {
+    z-index: 1;
+    margin-bottom: auto;
+    position: relative;
+    bottom: 55px;
 }
 
 main {
-    background: url(img/background.svg);
-    width: 375px;
-    height: 812px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: url(img/background.svg) no-repeat center/cover;
+    width: var(--width-badge);
+    height: var(--height-badge);
+    position: absolute;
+    border-radius: 15px;
+    top: 80px;
 }
 
 .container {
@@ -35,7 +64,7 @@ main {
 /* Photo */
 .avatar {
     width: 10rem;
-    margin: 11.5rem auto 0;
+    margin: auto;
 
     position: relative;
 }
@@ -43,7 +72,7 @@ main {
 .avatar span {
     position: absolute;
     top: -15px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .avatar > img {
@@ -52,6 +81,19 @@ main {
     object-fit: cover;
 
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+@keyframes logo {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#logo {
+    animation: logo 4s linear infinite;
 }
 
 h1 {
@@ -73,10 +115,16 @@ a {
     align-items: center;
 }
 
+a:hover {
+    color: var(--orange);
+    transition: .7s;
+}
+
 p {
     margin-top: 2rem;
 }
 
+/*Social*/
 ul {
     margin-top: 3rem;
 
@@ -86,4 +134,28 @@ ul {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+}
+
+ul li:hover {
+    background-color: var(--orange);
+    transition: .7s;
+    transform: scale(1.1);
+    z-index: 1;  
+}
+
+@media screen and (max-width: 550px) {
+    body #band {
+        display: none;
+        background-image: none;
+        width: 100%;
+    }
+
+    main {
+       background-image: url(img/background.svg) center/cover;
+       top: 0px;
+       height: 100vh;
+       width: 100vw;
+       border-radius: 0px;
+       overflow-x: hidden;
+    }
 }
