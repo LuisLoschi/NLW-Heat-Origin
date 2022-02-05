@@ -189,5 +189,18 @@ Você também pode visualizar o layout do projeto através [desse link](https://
   
 ---
   
+<details>
+  <summary>Aula 5</summary>
+  <br> 
+  Finalização do projeto com as seguintes mudanças:
+  
+  - Página responsiva;
+  - Efeito Rotação no selo;  
+  - Efeito hover nas mídias sociais;
+  
+</details>
+
+---
+  
 ## 📝 <a name="licença">Licença</a>
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
